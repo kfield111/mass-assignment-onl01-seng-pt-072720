@@ -4,7 +4,7 @@ class Person
   
 
   def initialize (person_attributes)
-    @name = name
+    person_attributes.each {|key, value| self.send (("#{key}"=), value)}
   end
 
 
